@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package role;
+
+option go_package = "pb/role";
+
+
+service Role {
+    rpc CreateRole       (CreateRoleRequest)        returns (CreateRoleResponse)       {}
+    rpc UpdateRole       (UpdateRoleRequest)        returns (UpdateRoleResponse)       {}
+    rpc GetRole          (GetRoleRequest)           returns (GetRoleResponse)          {}
+    rpc SearchRoleByName (SearchRoleByNameRequest)  returns (SearchRoleByNameResponse) {}
+}
+
+message RoleInfo {
+    int64   ID   = 10;
+    string  Name = 20;
+}
+
+message CreateRoleRequest {
+    RoleInfo In = 10;
+}
+
+message CreateRoleResponse {
+    RoleInfo Info = 10;
+}
+
+message UpdateRoleRequest {
+    RoleInfo In = 10;
+}
+
+message UpdateRoleResponse {
+    RoleInfo Info = 10;
+}
+
+message GetRoleRequest {
+    int64 ID = 10;
+}
+
+message GetRoleResponse {
+    RoleInfo Info = 10;
+}
+
+message SearchRoleByNameRequest {
+    string Name = 10;
+}
+
+message SearchRoleByNameResponse {
+    repeated RoleInfo Infos = 10;
+}

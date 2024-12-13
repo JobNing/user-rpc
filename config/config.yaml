@@ -1,0 +1,10 @@
+n-ip: 1.94.115.233
+n-port: 8848
+n-path: /nacos
+data-id: user-rpc
+namespace: 2206A
+group: rpc
+timeout-ms: 5000
+log-dir: ./tmp/nacos/log
+cache-dir: ./tmp/cache/log
+log-level: debug

@@ -1,0 +1,555 @@
+2024-12-13T17:10:23.719+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@_failover.
+2024-12-13T17:10:23.720+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-a888740d-b4eb-4249-b715-7faf3931d4c8)
+2024-12-13T17:10:23.720+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:10:23.720+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:10:23.720+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:10:23.720+0800	DEBUG	rpc/rpc_client.go:393	config-0-a888740d-b4eb-4249-b715-7faf3931d4c8 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:10:23.720+0800	DEBUG	rpc/rpc_client.go:393	config-0-a888740d-b4eb-4249-b715-7faf3931d4c8 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:10:23.720+0800	DEBUG	rpc/rpc_client.go:393	config-0-a888740d-b4eb-4249-b715-7faf3931d4c8 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:10:23.720+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-a888740d-b4eb-4249-b715-7faf3931d4c8 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:10:23.720+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:10:23.720+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:10:23.720+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:10:23.721+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:10:23.868+0800	WARN	rpc/rpc_client.go:329	[RpcClient.Start] config-0-a888740d-b4eb-4249-b715-7faf3931d4c8 fail to connect to server on start up, error message=server check request failed , err:rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: EOF", start up retry times left=2
+2024-12-13T17:10:23.868+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-a888740d-b4eb-4249-b715-7faf3931d4c8 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:10:23.868+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:10:23.868+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:10:23.869+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:10:23.999+0800	WARN	rpc/rpc_client.go:329	[RpcClient.Start] config-0-a888740d-b4eb-4249-b715-7faf3931d4c8 fail to connect to server on start up, error message=server check request failed , err:rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: EOF", start up retry times left=1
+2024-12-13T17:10:23.999+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-a888740d-b4eb-4249-b715-7faf3931d4c8 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:10:23.999+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:10:23.999+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:10:23.999+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:10:25.244+0800	INFO	rpc/rpc_client.go:337	config-0-a888740d-b4eb-4249-b715-7faf3931d4c8 success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081024829_109.110.162.201_24793
+2024-12-13T17:10:25.624+0800	DEBUG	rpc/grpc_connection.go:69	1734081024829_109.110.162.201_24793 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081025244" > headers:<key:"Client-RequestToken" value:"ecac244fd29d67db114624e065c1aed1" > headers:<key:"Spas-Signature" value:"wf+PiqmLzI1jZts0ATeiGk5vvoI=" > headers:<key:"Timestamp" value:"1734081025244" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":500,"errorCode":300,"message":"config data not exist","lastModified":0,"beta":false,"success":false}
+2024-12-13T17:10:25.624+0800	WARN	rpc/rpc_client.go:613	ConfigQueryRequest request received fail response, error code: 300, result code: 500, message: [config data not exist]
+2024-12-13T17:10:25.624+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Content cache file, file path ./tmp/cache/log/config/user-rpc@@rpc@@, file doesn't exist.
+2024-12-13T17:10:25.625+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@, file doesn't exist.
+2024-12-13T17:11:59.980+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@_failover.
+2024-12-13T17:11:59.981+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-e4b1c535-5dd5-4f7c-b7f2-af3d446f2236)
+2024-12-13T17:11:59.981+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:11:59.981+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:11:59.981+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:11:59.981+0800	DEBUG	rpc/rpc_client.go:393	config-0-e4b1c535-5dd5-4f7c-b7f2-af3d446f2236 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:11:59.981+0800	DEBUG	rpc/rpc_client.go:393	config-0-e4b1c535-5dd5-4f7c-b7f2-af3d446f2236 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:11:59.981+0800	DEBUG	rpc/rpc_client.go:393	config-0-e4b1c535-5dd5-4f7c-b7f2-af3d446f2236 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:11:59.981+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-e4b1c535-5dd5-4f7c-b7f2-af3d446f2236 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:11:59.981+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:11:59.981+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:11:59.981+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:11:59.982+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:12:01.172+0800	INFO	rpc/rpc_client.go:337	config-0-e4b1c535-5dd5-4f7c-b7f2-af3d446f2236 success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081120808_46.232.121.35_42621
+2024-12-13T17:12:01.540+0800	DEBUG	rpc/grpc_connection.go:69	1734081120808_46.232.121.35_42621 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081121173" > headers:<key:"Client-RequestToken" value:"cc5cbbd8244354154ce80143860f8a18" > headers:<key:"Spas-Signature" value:"aEKAC3JJSFKqxZSzIjODhbMWKN4=" > headers:<key:"Timestamp" value:"1734081121173" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":500,"errorCode":300,"message":"config data not exist","lastModified":0,"beta":false,"success":false}
+2024-12-13T17:12:01.540+0800	WARN	rpc/rpc_client.go:613	ConfigQueryRequest request received fail response, error code: 300, result code: 500, message: [config data not exist]
+2024-12-13T17:12:01.541+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Content cache file, file path ./tmp/cache/log/config/user-rpc@@rpc@@, file doesn't exist.
+2024-12-13T17:12:01.541+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@, file doesn't exist.
+2024-12-13T17:12:38.751+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@_failover.
+2024-12-13T17:12:38.752+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-4489184a-5275-4fe2-a558-6d2498ffa681)
+2024-12-13T17:12:38.752+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:12:38.752+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:12:38.752+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:12:38.752+0800	DEBUG	rpc/rpc_client.go:393	config-0-4489184a-5275-4fe2-a558-6d2498ffa681 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:12:38.752+0800	DEBUG	rpc/rpc_client.go:393	config-0-4489184a-5275-4fe2-a558-6d2498ffa681 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:12:38.752+0800	DEBUG	rpc/rpc_client.go:393	config-0-4489184a-5275-4fe2-a558-6d2498ffa681 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:12:38.752+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-4489184a-5275-4fe2-a558-6d2498ffa681 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:12:38.752+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:12:38.752+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:12:38.752+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:12:38.753+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:12:39.957+0800	INFO	rpc/rpc_client.go:337	config-0-4489184a-5275-4fe2-a558-6d2498ffa681 success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081159555_109.110.162.201_6699
+2024-12-13T17:12:40.326+0800	DEBUG	rpc/grpc_connection.go:69	1734081159555_109.110.162.201_6699 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081159958" > headers:<key:"Client-RequestToken" value:"1695366e6f63e060c06ed19a069ad05f" > headers:<key:"Spas-Signature" value:"T20RSTrN9bplZnCblXfmz715Yxo=" > headers:<key:"Timestamp" value:"1734081159958" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":500,"errorCode":300,"message":"config data not exist","lastModified":0,"beta":false,"success":false}
+2024-12-13T17:12:40.326+0800	WARN	rpc/rpc_client.go:613	ConfigQueryRequest request received fail response, error code: 300, result code: 500, message: [config data not exist]
+2024-12-13T17:12:40.326+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Content cache file, file path ./tmp/cache/log/config/user-rpc@@rpc@@, file doesn't exist.
+2024-12-13T17:12:40.326+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@, file doesn't exist.
+2024-12-13T17:13:06.317+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@_failover.
+2024-12-13T17:13:06.318+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-de6f58d3-0a0f-4a75-81ac-03ebe13384ff)
+2024-12-13T17:13:06.318+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:13:06.318+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:13:06.318+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:13:06.318+0800	DEBUG	rpc/rpc_client.go:393	config-0-de6f58d3-0a0f-4a75-81ac-03ebe13384ff register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:13:06.318+0800	DEBUG	rpc/rpc_client.go:393	config-0-de6f58d3-0a0f-4a75-81ac-03ebe13384ff register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:13:06.318+0800	DEBUG	rpc/rpc_client.go:393	config-0-de6f58d3-0a0f-4a75-81ac-03ebe13384ff register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:13:06.318+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-de6f58d3-0a0f-4a75-81ac-03ebe13384ff try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:13:06.318+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:13:06.318+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:13:06.318+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:13:06.319+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:13:07.563+0800	INFO	rpc/rpc_client.go:337	config-0-de6f58d3-0a0f-4a75-81ac-03ebe13384ff success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081187133_109.110.162.201_18741
+2024-12-13T17:13:07.955+0800	DEBUG	rpc/grpc_connection.go:69	1734081187133_109.110.162.201_18741 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081187563" > headers:<key:"Client-RequestToken" value:"8fe89e3a3626de4bedf16fb513812325" > headers:<key:"Spas-Signature" value:"SeQ8kStyOOOs6n/kFu7C3naezGc=" > headers:<key:"Timestamp" value:"1734081187563" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":500,"errorCode":300,"message":"config data not exist","lastModified":0,"beta":false,"success":false}
+2024-12-13T17:13:07.955+0800	WARN	rpc/rpc_client.go:613	ConfigQueryRequest request received fail response, error code: 300, result code: 500, message: [config data not exist]
+2024-12-13T17:13:07.955+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Content cache file, file path ./tmp/cache/log/config/user-rpc@@rpc@@, file doesn't exist.
+2024-12-13T17:13:07.955+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@, file doesn't exist.
+2024-12-13T17:14:11.562+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:14:11.562+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-26061f1b-7148-467d-808c-3fcc8a54ec5f)
+2024-12-13T17:14:11.562+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:14:11.562+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:14:11.562+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:14:11.562+0800	DEBUG	rpc/rpc_client.go:393	config-0-26061f1b-7148-467d-808c-3fcc8a54ec5f register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:14:11.562+0800	DEBUG	rpc/rpc_client.go:393	config-0-26061f1b-7148-467d-808c-3fcc8a54ec5f register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:14:11.562+0800	DEBUG	rpc/rpc_client.go:393	config-0-26061f1b-7148-467d-808c-3fcc8a54ec5f register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:14:11.562+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-26061f1b-7148-467d-808c-3fcc8a54ec5f try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:14:11.562+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:14:11.562+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:14:11.562+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:14:11.563+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:14:12.762+0800	INFO	rpc/rpc_client.go:337	config-0-26061f1b-7148-467d-808c-3fcc8a54ec5f success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081252371_109.110.162.201_7773
+2024-12-13T17:14:13.136+0800	DEBUG	rpc/grpc_connection.go:69	1734081252371_109.110.162.201_7773 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081252762" > headers:<key:"Client-RequestToken" value:"f95925962cf705e227a929f0d95ab72f" > headers:<key:"Spas-Signature" value:"4DnuF2cxB20wm5xgb2oHv6BEDGI=" > headers:<key:"Timestamp" value:"1734081252762" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:","encryptedDataKey":"","contentType":"yaml","md5":"baecdd9201009791e351aca6b26474b8","lastModified":1734077474735,"beta":false,"success":true}
+2024-12-13T17:14:13.137+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:14:36.568+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:14:36.568+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-223f8431-2750-4bee-9a1f-64b7e8e1d23f)
+2024-12-13T17:14:36.569+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:14:36.569+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:14:36.569+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:14:36.569+0800	DEBUG	rpc/rpc_client.go:393	config-0-223f8431-2750-4bee-9a1f-64b7e8e1d23f register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:14:36.569+0800	DEBUG	rpc/rpc_client.go:393	config-0-223f8431-2750-4bee-9a1f-64b7e8e1d23f register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:14:36.569+0800	DEBUG	rpc/rpc_client.go:393	config-0-223f8431-2750-4bee-9a1f-64b7e8e1d23f register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:14:36.569+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-223f8431-2750-4bee-9a1f-64b7e8e1d23f try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:14:36.569+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:14:36.569+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:14:36.569+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:14:36.570+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:14:37.778+0800	INFO	rpc/rpc_client.go:337	config-0-223f8431-2750-4bee-9a1f-64b7e8e1d23f success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081277380_109.110.162.201_27485
+2024-12-13T17:14:38.155+0800	DEBUG	rpc/grpc_connection.go:69	1734081277380_109.110.162.201_27485 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081277778" > headers:<key:"Client-RequestToken" value:"d4aef5499413a11ca73e3a6ed627ad60" > headers:<key:"Spas-Signature" value:"zPS89h26YtbikB3G4O6vh5GeQD0=" > headers:<key:"Timestamp" value:"1734081277778" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:","encryptedDataKey":"","contentType":"yaml","md5":"baecdd9201009791e351aca6b26474b8","lastModified":1734077474735,"beta":false,"success":true}
+2024-12-13T17:14:38.157+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:15:07.782+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:15:07.782+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4)
+2024-12-13T17:15:07.782+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:15:07.782+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:15:07.782+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:15:07.782+0800	DEBUG	rpc/rpc_client.go:393	config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:15:07.782+0800	DEBUG	rpc/rpc_client.go:393	config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:15:07.783+0800	DEBUG	rpc/rpc_client.go:393	config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:15:07.783+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:15:07.783+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:15:07.783+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:15:07.783+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:15:07.783+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:15:10.783+0800	WARN	rpc/rpc_client.go:329	[RpcClient.Start] config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4 fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = received context error while waiting for new LB policy update: context deadline exceeded, start up retry times left=2
+2024-12-13T17:15:10.784+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:15:10.784+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:15:10.784+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:15:10.784+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:15:13.785+0800	WARN	rpc/rpc_client.go:329	[RpcClient.Start] config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4 fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = received context error while waiting for new LB policy update: context deadline exceeded, start up retry times left=1
+2024-12-13T17:15:13.785+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:15:13.785+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:15:13.785+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:15:13.785+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:15:14.982+0800	INFO	rpc/rpc_client.go:337	config-0-b6847eee-fa7f-4448-a3ca-cb3fdc1526f4 success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081314584_46.232.121.35_34217
+2024-12-13T17:15:15.327+0800	DEBUG	rpc/grpc_connection.go:69	1734081314584_46.232.121.35_34217 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081314982" > headers:<key:"Client-RequestToken" value:"468b38defcfd25f17c3889de32b3a096" > headers:<key:"Spas-Signature" value:"3GIZdU9nQtTmwIGctWIGiLmS+fg=" > headers:<key:"Timestamp" value:"1734081314982" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:","encryptedDataKey":"","contentType":"yaml","md5":"baecdd9201009791e351aca6b26474b8","lastModified":1734077474735,"beta":false,"success":true}
+2024-12-13T17:15:15.327+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:15:53.561+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:15:53.561+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-d0ea694e-0a65-4b09-bad0-7a2224656b6e)
+2024-12-13T17:15:53.561+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:15:53.561+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:15:53.561+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:15:53.561+0800	DEBUG	rpc/rpc_client.go:393	config-0-d0ea694e-0a65-4b09-bad0-7a2224656b6e register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:15:53.561+0800	DEBUG	rpc/rpc_client.go:393	config-0-d0ea694e-0a65-4b09-bad0-7a2224656b6e register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:15:53.561+0800	DEBUG	rpc/rpc_client.go:393	config-0-d0ea694e-0a65-4b09-bad0-7a2224656b6e register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:15:53.561+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-d0ea694e-0a65-4b09-bad0-7a2224656b6e try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:15:53.561+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:15:53.561+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:15:53.561+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:15:53.562+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:15:54.858+0800	INFO	rpc/rpc_client.go:337	config-0-d0ea694e-0a65-4b09-bad0-7a2224656b6e success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081354392_109.110.162.201_22641
+2024-12-13T17:15:55.439+0800	DEBUG	rpc/grpc_connection.go:69	1734081354392_109.110.162.201_22641 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081354858" > headers:<key:"Client-RequestToken" value:"54899e2dd210994dd0d7b8564b975965" > headers:<key:"Spas-Signature" value:"KAFh4uj2twt3BWRSbQiaWlos4B4=" > headers:<key:"Timestamp" value:"1734081354858" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:","encryptedDataKey":"","contentType":"yaml","md5":"baecdd9201009791e351aca6b26474b8","lastModified":1734077474735,"beta":false,"success":true}
+2024-12-13T17:15:55.440+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:16:15.067+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:16:15.068+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-aadeabe0-0fdf-4b98-8f6f-de6d0233e9fc)
+2024-12-13T17:16:15.068+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:16:15.068+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:16:15.068+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:16:15.068+0800	DEBUG	rpc/rpc_client.go:393	config-0-aadeabe0-0fdf-4b98-8f6f-de6d0233e9fc register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:16:15.068+0800	DEBUG	rpc/rpc_client.go:393	config-0-aadeabe0-0fdf-4b98-8f6f-de6d0233e9fc register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:16:15.068+0800	DEBUG	rpc/rpc_client.go:393	config-0-aadeabe0-0fdf-4b98-8f6f-de6d0233e9fc register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:16:15.068+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-aadeabe0-0fdf-4b98-8f6f-de6d0233e9fc try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:16:15.068+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:16:15.068+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:16:15.068+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:16:15.069+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:16:17.021+0800	INFO	rpc/rpc_client.go:337	config-0-aadeabe0-0fdf-4b98-8f6f-de6d0233e9fc success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081375982_109.110.162.201_25645
+2024-12-13T17:16:17.485+0800	DEBUG	rpc/grpc_connection.go:69	1734081375982_109.110.162.201_25645 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081377021" > headers:<key:"Client-RequestToken" value:"3ad82a37b6545e51d5422e2e4c5c7d3a" > headers:<key:"Spas-Signature" value:"zHJLHuh/9DTYnuT8jGdWrMG+BhY=" > headers:<key:"Timestamp" value:"1734081377021" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:","encryptedDataKey":"","contentType":"yaml","md5":"baecdd9201009791e351aca6b26474b8","lastModified":1734077474735,"beta":false,"success":true}
+2024-12-13T17:16:17.486+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:16:43.238+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:16:43.239+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-79493e99-35ad-4a3b-a4c1-f2d7fd8a8c31)
+2024-12-13T17:16:43.239+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:16:43.239+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:16:43.239+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:16:43.239+0800	DEBUG	rpc/rpc_client.go:393	config-0-79493e99-35ad-4a3b-a4c1-f2d7fd8a8c31 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:16:43.239+0800	DEBUG	rpc/rpc_client.go:393	config-0-79493e99-35ad-4a3b-a4c1-f2d7fd8a8c31 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:16:43.239+0800	DEBUG	rpc/rpc_client.go:393	config-0-79493e99-35ad-4a3b-a4c1-f2d7fd8a8c31 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:16:43.239+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-79493e99-35ad-4a3b-a4c1-f2d7fd8a8c31 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:16:43.239+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:16:43.239+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:16:43.239+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:16:43.240+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:16:44.517+0800	INFO	rpc/rpc_client.go:337	config-0-79493e99-35ad-4a3b-a4c1-f2d7fd8a8c31 success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081404057_109.110.162.201_14699
+2024-12-13T17:16:45.167+0800	DEBUG	rpc/grpc_connection.go:69	1734081404057_109.110.162.201_14699 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081404517" > headers:<key:"Client-RequestToken" value:"eb9145a119c382e5933f62e460169150" > headers:<key:"Spas-Signature" value:"g2daId8rRoGaLRM7iGxcTr12hgc=" > headers:<key:"Timestamp" value:"1734081404517" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":500,"errorCode":301,"message":"Connection is unregistered.","success":false}
+2024-12-13T17:16:45.167+0800	INFO	rpc/rpc_client.go:603	Connection is unregistered, switch server, connectionId=1734081404057_109.110.162.201_14699, request=ConfigQueryRequest
+2024-12-13T17:16:45.168+0800	INFO	rpc/rpc_client.go:426	config-0-79493e99-35ad-4a3b-a4c1-f2d7fd8a8c31 try to re connect to a new server, server is not appointed, will choose a random server.
+2024-12-13T17:16:45.168+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=ConfigQueryRequest, body={"requestId":"","group":"rpc","dataId":"user-rpc","tenant":"2206A","module":"config","tag":""}, retryTimes=0, error=Connection is unregistered.
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:609
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).requestProxy
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:64
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).queryConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:116
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).getConfigInner
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:192
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).GetConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:160
+github.com/JobNing/corehub/config.GetConfig
+	/Users/suning/Desktop/bw/zg5/demo/corehub/config/nacons.go:48
+github.com/JobNing/corehub/mysql.WithClient
+	/Users/suning/Desktop/bw/zg5/demo/corehub/mysql/mysql.go:25
+user-rpc/migrate.AutoMigrate
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/migrate/migrate.go:10
+main.main
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/main.go:13
+runtime.main
+	/usr/local/go/src/runtime/proc.go:271
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1695
+2024-12-13T17:16:45.168+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:16:45.168+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:16:45.168+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:16:45.269+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=ConfigQueryRequest, body={"requestId":"","group":"rpc","dataId":"user-rpc","tenant":"2206A","module":"config","tag":""}, retryTimes=1, error=client not connected, current status:UNHEALTHY
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).requestProxy
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:64
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).queryConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:116
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).getConfigInner
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:192
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).GetConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:160
+github.com/JobNing/corehub/config.GetConfig
+	/Users/suning/Desktop/bw/zg5/demo/corehub/config/nacons.go:48
+github.com/JobNing/corehub/mysql.WithClient
+	/Users/suning/Desktop/bw/zg5/demo/corehub/mysql/mysql.go:25
+user-rpc/migrate.AutoMigrate
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/migrate/migrate.go:10
+main.main
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/main.go:13
+runtime.main
+	/usr/local/go/src/runtime/proc.go:271
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1695
+2024-12-13T17:16:45.369+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=ConfigQueryRequest, body={"requestId":"","group":"rpc","dataId":"user-rpc","tenant":"2206A","module":"config","tag":""}, retryTimes=2, error=client not connected, current status:UNHEALTHY
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).requestProxy
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:64
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).queryConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:116
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).getConfigInner
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:192
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).GetConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:160
+github.com/JobNing/corehub/config.GetConfig
+	/Users/suning/Desktop/bw/zg5/demo/corehub/config/nacons.go:48
+github.com/JobNing/corehub/mysql.WithClient
+	/Users/suning/Desktop/bw/zg5/demo/corehub/mysql/mysql.go:25
+user-rpc/migrate.AutoMigrate
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/migrate/migrate.go:10
+main.main
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/main.go:13
+runtime.main
+	/usr/local/go/src/runtime/proc.go:271
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1695
+2024-12-13T17:16:45.471+0800	ERROR	config_client/config_client.go:195	get config from server error:client not connected, current status:UNHEALTHY, dataId=user-rpc, group=rpc, namespaceId=2206A
+2024-12-13T17:16:57.997+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:16:57.998+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d)
+2024-12-13T17:16:57.998+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:16:57.998+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:16:57.998+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:16:57.998+0800	DEBUG	rpc/rpc_client.go:393	config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:16:57.998+0800	DEBUG	rpc/rpc_client.go:393	config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:16:57.998+0800	DEBUG	rpc/rpc_client.go:393	config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:16:57.998+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:16:57.998+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:16:57.998+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:16:57.998+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:16:57.999+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:17:01.000+0800	WARN	rpc/rpc_client.go:329	[RpcClient.Start] config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = received context error while waiting for new LB policy update: context deadline exceeded, start up retry times left=2
+2024-12-13T17:17:01.000+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:17:01.000+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:17:01.000+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:17:01.000+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:17:04.004+0800	WARN	rpc/rpc_client.go:329	[RpcClient.Start] config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = received context error while waiting for new LB policy update: context deadline exceeded, start up retry times left=1
+2024-12-13T17:17:04.004+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:17:04.004+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:17:04.004+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:17:04.004+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:17:07.005+0800	WARN	rpc/rpc_client.go:329	[RpcClient.Start] config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = received context error while waiting for new LB policy update: context deadline exceeded, start up retry times left=0
+2024-12-13T17:17:07.005+0800	INFO	rpc/rpc_client.go:426	config-0-0bde3c1e-1266-4aaa-a121-36b8c324d90d try to re connect to a new server, server is not appointed, will choose a random server.
+2024-12-13T17:17:07.005+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:17:07.005+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:17:07.005+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:17:07.005+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=ConfigQueryRequest, body={"requestId":"","group":"rpc","dataId":"user-rpc","tenant":"2206A","module":"config","tag":""}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).requestProxy
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:64
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).queryConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:116
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).getConfigInner
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:192
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).GetConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:160
+github.com/JobNing/corehub/config.GetConfig
+	/Users/suning/Desktop/bw/zg5/demo/corehub/config/nacons.go:48
+github.com/JobNing/corehub/mysql.WithClient
+	/Users/suning/Desktop/bw/zg5/demo/corehub/mysql/mysql.go:25
+user-rpc/migrate.AutoMigrate
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/migrate/migrate.go:10
+main.main
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/main.go:13
+runtime.main
+	/usr/local/go/src/runtime/proc.go:271
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1695
+2024-12-13T17:17:07.106+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=ConfigQueryRequest, body={"requestId":"","group":"rpc","dataId":"user-rpc","tenant":"2206A","module":"config","tag":""}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).requestProxy
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:64
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).queryConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:116
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).getConfigInner
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:192
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).GetConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:160
+github.com/JobNing/corehub/config.GetConfig
+	/Users/suning/Desktop/bw/zg5/demo/corehub/config/nacons.go:48
+github.com/JobNing/corehub/mysql.WithClient
+	/Users/suning/Desktop/bw/zg5/demo/corehub/mysql/mysql.go:25
+user-rpc/migrate.AutoMigrate
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/migrate/migrate.go:10
+main.main
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/main.go:13
+runtime.main
+	/usr/local/go/src/runtime/proc.go:271
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1695
+2024-12-13T17:17:07.207+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=ConfigQueryRequest, body={"requestId":"","group":"rpc","dataId":"user-rpc","tenant":"2206A","module":"config","tag":""}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).requestProxy
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:64
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).queryConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_proxy.go:116
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).getConfigInner
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:192
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).GetConfig
+	/Users/suning/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/config_client/config_client.go:160
+github.com/JobNing/corehub/config.GetConfig
+	/Users/suning/Desktop/bw/zg5/demo/corehub/config/nacons.go:48
+github.com/JobNing/corehub/mysql.WithClient
+	/Users/suning/Desktop/bw/zg5/demo/corehub/mysql/mysql.go:25
+user-rpc/migrate.AutoMigrate
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/migrate/migrate.go:10
+main.main
+	/Users/suning/Desktop/bw/zg5/demo/user-rpc/main.go:13
+runtime.main
+	/usr/local/go/src/runtime/proc.go:271
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1695
+2024-12-13T17:17:07.308+0800	ERROR	config_client/config_client.go:195	get config from server error:client not connected, current status:STARTING, dataId=user-rpc, group=rpc, namespaceId=2206A
+2024-12-13T17:17:53.775+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:17:53.775+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-bca13bbf-3943-42c5-ba0f-d573db60ebaf)
+2024-12-13T17:17:53.776+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:17:53.776+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:17:53.776+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:17:53.776+0800	DEBUG	rpc/rpc_client.go:393	config-0-bca13bbf-3943-42c5-ba0f-d573db60ebaf register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:17:53.776+0800	DEBUG	rpc/rpc_client.go:393	config-0-bca13bbf-3943-42c5-ba0f-d573db60ebaf register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:17:53.776+0800	DEBUG	rpc/rpc_client.go:393	config-0-bca13bbf-3943-42c5-ba0f-d573db60ebaf register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:17:53.776+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-bca13bbf-3943-42c5-ba0f-d573db60ebaf try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:17:53.776+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:17:53.776+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:17:53.776+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:17:53.777+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:17:55.109+0800	INFO	rpc/rpc_client.go:337	config-0-bca13bbf-3943-42c5-ba0f-d573db60ebaf success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081474599_109.110.162.201_32409
+2024-12-13T17:17:55.525+0800	DEBUG	rpc/grpc_connection.go:69	1734081474599_109.110.162.201_32409 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081475110" > headers:<key:"Client-RequestToken" value:"895ca1fe1bfce4e3b72a551a83847535" > headers:<key:"Spas-Signature" value:"0bfy8R4leRDGqxrM7znqwn6jz0U=" > headers:<key:"Timestamp" value:"1734081475110" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:\n    host: 60.204.223.38\n    port: 3306\n    user: root\n    pwd: \"123456\"\n    dbname: test\n \n redis:\n    ","encryptedDataKey":"","contentType":"yaml","md5":"3a5fdd3c39d92eecb47edd47d81835ff","lastModified":1734081398440,"beta":false,"success":true}
+2024-12-13T17:17:55.526+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:18:39.197+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:18:39.197+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-61fea184-b170-4c10-b7a2-2aa42782b0bf)
+2024-12-13T17:18:39.197+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:18:39.197+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:18:39.197+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:18:39.197+0800	DEBUG	rpc/rpc_client.go:393	config-0-61fea184-b170-4c10-b7a2-2aa42782b0bf register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:18:39.197+0800	DEBUG	rpc/rpc_client.go:393	config-0-61fea184-b170-4c10-b7a2-2aa42782b0bf register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:18:39.197+0800	DEBUG	rpc/rpc_client.go:393	config-0-61fea184-b170-4c10-b7a2-2aa42782b0bf register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:18:39.197+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-61fea184-b170-4c10-b7a2-2aa42782b0bf try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:18:39.197+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:18:39.198+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:18:39.198+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:18:39.198+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:18:40.551+0800	INFO	rpc/rpc_client.go:337	config-0-61fea184-b170-4c10-b7a2-2aa42782b0bf success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081520119_109.110.162.201_8459
+2024-12-13T17:18:40.939+0800	DEBUG	rpc/grpc_connection.go:69	1734081520119_109.110.162.201_8459 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081520551" > headers:<key:"Client-RequestToken" value:"078488104f6f978ed82bde9a489c87f4" > headers:<key:"Spas-Signature" value:"HAxGji1UZ7FTZ/u67Qt2ZVsRq+M=" > headers:<key:"Timestamp" value:"1734081520551" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:\n    host: 60.204.223.38\n    port: 3306\n    user: root\n    pwd: \"123456\"\n    dbname: test\n \n redis:\n    ","encryptedDataKey":"","contentType":"yaml","md5":"3a5fdd3c39d92eecb47edd47d81835ff","lastModified":1734081398440,"beta":false,"success":true}
+2024-12-13T17:18:40.940+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:19:22.529+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:19:22.529+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-5ebc3ce8-f972-402d-8d6b-7df7e1c9efa6)
+2024-12-13T17:19:22.530+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:19:22.530+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:19:22.530+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:19:22.530+0800	DEBUG	rpc/rpc_client.go:393	config-0-5ebc3ce8-f972-402d-8d6b-7df7e1c9efa6 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:19:22.530+0800	DEBUG	rpc/rpc_client.go:393	config-0-5ebc3ce8-f972-402d-8d6b-7df7e1c9efa6 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:19:22.530+0800	DEBUG	rpc/rpc_client.go:393	config-0-5ebc3ce8-f972-402d-8d6b-7df7e1c9efa6 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:19:22.530+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-5ebc3ce8-f972-402d-8d6b-7df7e1c9efa6 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:19:22.530+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:19:22.530+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:19:22.530+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:19:22.531+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:19:23.837+0800	INFO	rpc/rpc_client.go:337	config-0-5ebc3ce8-f972-402d-8d6b-7df7e1c9efa6 success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081563356_109.110.162.201_19257
+2024-12-13T17:19:24.387+0800	DEBUG	rpc/grpc_connection.go:69	1734081563356_109.110.162.201_19257 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081563837" > headers:<key:"Client-RequestToken" value:"8a1db96cf3ba922ab9cf2d44358d40f1" > headers:<key:"Spas-Signature" value:"dl+EVLOrdSFw0xjzGTJT2zyI82M=" > headers:<key:"Timestamp" value:"1734081563837" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:\n    host: 60.204.223.38\n    port: 3306\n    user: root\n    pwd: \"123456\"\n    dbname: test\n redis: \"\"","encryptedDataKey":"","contentType":"yaml","md5":"514b5d35822d7bfc64bfd5854bc7236f","lastModified":1734081557851,"beta":false,"success":true}
+2024-12-13T17:19:24.388+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:19:45.153+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:19:45.153+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-d2a75c57-44c5-42c2-9c7d-edc198d3fbd7)
+2024-12-13T17:19:45.153+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:19:45.153+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:19:45.153+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:19:45.153+0800	DEBUG	rpc/rpc_client.go:393	config-0-d2a75c57-44c5-42c2-9c7d-edc198d3fbd7 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:19:45.153+0800	DEBUG	rpc/rpc_client.go:393	config-0-d2a75c57-44c5-42c2-9c7d-edc198d3fbd7 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:19:45.153+0800	DEBUG	rpc/rpc_client.go:393	config-0-d2a75c57-44c5-42c2-9c7d-edc198d3fbd7 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:19:45.153+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-d2a75c57-44c5-42c2-9c7d-edc198d3fbd7 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:19:45.153+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:19:45.153+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:19:45.153+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:19:45.154+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:19:46.886+0800	INFO	rpc/rpc_client.go:337	config-0-d2a75c57-44c5-42c2-9c7d-edc198d3fbd7 success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081586859_109.110.162.201_10145
+2024-12-13T17:19:47.259+0800	DEBUG	rpc/grpc_connection.go:69	1734081586859_109.110.162.201_10145 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081586887" > headers:<key:"Client-RequestToken" value:"3c37c1a87f91393d08c7a53130be5934" > headers:<key:"Spas-Signature" value:"DlYnXdNkZ/FxWoJQQJdNhx8djsU=" > headers:<key:"Timestamp" value:"1734081586887" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:\n    host: 60.204.223.38\n    port: 3306\n    user: root\n    pwd: \"123456\"\n    dbname: test","encryptedDataKey":"","contentType":"yaml","md5":"b4201491b0b4ec6dc68b2efa3e0fc3d8","lastModified":1734081579167,"beta":false,"success":true}
+2024-12-13T17:19:47.259+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:20:13.602+0800	WARN	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: ./tmp/cache/log/config/user-rpc@@rpc@@2206A_failover.
+2024-12-13T17:20:13.602+0800	INFO	rpc/rpc_client.go:157	init rpc client for name %!(EXTRA string=config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978)
+2024-12-13T17:20:13.602+0800	INFO	rpc/rpc_client.go:166	get app conn labels from client config map[] 
+2024-12-13T17:20:13.602+0800	INFO	rpc/rpc_client.go:168	get app conn labels from env map[] 
+2024-12-13T17:20:13.603+0800	INFO	rpc/rpc_client.go:171	final app conn labels : map[] 
+2024-12-13T17:20:13.603+0800	DEBUG	rpc/rpc_client.go:393	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-12-13T17:20:13.603+0800	DEBUG	rpc/rpc_client.go:393	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-12-13T17:20:13.603+0800	DEBUG	rpc/rpc_client.go:393	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-12-13T17:20:13.603+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:20:13.603+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:20:13.603+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:20:13.603+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:20:13.603+0800	INFO	util/common.go:96	Local IP:172.20.10.4
+2024-12-13T17:20:16.604+0800	WARN	rpc/rpc_client.go:329	[RpcClient.Start] config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = received context error while waiting for new LB policy update: context deadline exceeded, start up retry times left=2
+2024-12-13T17:20:16.604+0800	INFO	rpc/rpc_client.go:327	[RpcClient.Start] config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 try to connect to server on start up, server: {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}
+2024-12-13T17:20:16.604+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:20:16.604+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:20:16.604+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:20:18.038+0800	INFO	rpc/rpc_client.go:337	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 success to connect to server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1734081617540_109.110.162.201_19889
+2024-12-13T17:20:18.447+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"ConfigQueryRequest" clientIp:"172.20.10.4" headers:<key:"Client-AppName" value:"" > headers:<key:"Client-RequestTS" value:"1734081618038" > headers:<key:"Client-RequestToken" value:"b2a964dee120320829c495d50e456900" > headers:<key:"Spas-Signature" value:"NcvmeiWvMx7FNNAqdK1dyNNuNuk=" > headers:<key:"Timestamp" value:"1734081618038" > headers:<key:"charset" value:"utf-8" > headers:<key:"exConfigInfo" value:"true" > headers:<key:"notify" value:"false" > > body:<value:"{\"requestId\":\"\",\"group\":\"rpc\",\"dataId\":\"user-rpc\",\"tenant\":\"2206A\",\"module\":\"config\",\"tag\":\"\"}" > , response={"resultCode":200,"errorCode":0,"content":"mysql:\n    host: 60.204.223.38\n    port: 3306\n    user: root\n    pwd: \"123456\"\n    dbname: test","encryptedDataKey":"","contentType":"yaml","md5":"b4201491b0b4ec6dc68b2efa3e0fc3d8","lastModified":1734081579167,"beta":false,"success":true}
+2024-12-13T17:20:18.448+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path ./tmp/cache/log/config/encrypted-data-key/user-rpc@@rpc@@2206A, file doesn't exist.
+2024-12-13T17:20:24.090+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:20:29.490+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:20:34.888+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:20:40.498+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:20:46.114+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:20:51.509+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:20:56.901+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:02.298+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:07.688+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:13.080+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:18.519+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:23.998+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:29.481+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:34.880+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:40.341+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:45.758+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:51.220+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:21:56.811+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:02.281+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:07.679+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:13.138+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:18.566+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:23.971+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:29.375+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:34.818+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:40.213+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:45.640+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:51.048+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:22:56.445+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:01.962+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:07.361+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:13.193+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:18.660+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:24.068+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:29.457+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:34.844+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:40.241+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:46.169+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:52.159+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:23:57.615+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:03.029+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:08.458+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:14.188+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:19.604+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:25.371+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:30.769+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:36.533+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:42.136+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:47.531+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:53.206+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:24:58.597+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:04.135+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:09.600+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:15.007+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:20.393+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:25.784+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:31.186+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:36.585+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:41.996+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:47.385+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:52.798+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:25:58.196+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:26:03.606+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:26:09.023+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:26:14.424+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:26:19.821+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:26:25.241+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:26:30.652+0800	DEBUG	rpc/grpc_connection.go:69	1734081617540_109.110.162.201_19889 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:26:38.654+0800	DEBUG	rpc/grpc_connection.go:59	1734081617540_109.110.162.201_19889 grpc request nacos server failed, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , err=rpc error: code = DeadlineExceeded desc = context deadline exceeded 
+2024-12-13T17:26:38.654+0800	ERROR	rpc/rpc_client.go:525	client sendHealthCheck failed,err=rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-12-13T17:26:38.654+0800	INFO	rpc/rpc_client.go:511	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 server healthy check fail, currentConnection=1734081617540_109.110.162.201_19889
+2024-12-13T17:26:38.654+0800	INFO	rpc/rpc_client.go:426	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 try to re connect to a new server, server is not appointed, will choose a random server.
+2024-12-13T17:26:38.654+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:26:38.654+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:26:38.654+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:26:41.727+0800	INFO	rpc/rpc_client.go:439	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 success to connect a server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}, connectionId=1734081999616_109.110.162.201_15435
+2024-12-13T17:26:41.727+0800	INFO	rpc/rpc_client.go:443	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 abandon prev connection, server is {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}, connectionId is 1734081617540_109.110.162.201_19889
+2024-12-13T17:26:41.727+0800	ERROR	rpc/grpc_client.go:280	connectionId 1734081617540_109.110.162.201_19889 received error event, isRunning:true, isAbandon=true, error=rpc error: code = Canceled desc = grpc: the client connection is closing
+2024-12-13T17:26:47.195+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:26:52.858+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:26:58.229+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:03.613+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:08.979+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:14.565+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:19.933+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:25.290+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:30.665+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:36.173+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:42.003+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:47.519+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:53.120+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:27:58.494+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:28:03.855+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:28:09.233+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:28:14.768+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:28:20.121+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:28:25.750+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:28:33.464+0800	DEBUG	rpc/grpc_connection.go:69	1734081999616_109.110.162.201_15435 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:28:41.466+0800	DEBUG	rpc/grpc_connection.go:59	1734081999616_109.110.162.201_15435 grpc request nacos server failed, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , err=rpc error: code = DeadlineExceeded desc = context deadline exceeded 
+2024-12-13T17:28:41.466+0800	ERROR	rpc/rpc_client.go:525	client sendHealthCheck failed,err=rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-12-13T17:28:41.466+0800	INFO	rpc/rpc_client.go:511	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 server healthy check fail, currentConnection=1734081999616_109.110.162.201_15435
+2024-12-13T17:28:41.466+0800	INFO	rpc/rpc_client.go:426	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 try to re connect to a new server, server is not appointed, will choose a random server.
+2024-12-13T17:28:41.467+0800	INFO	rpc/grpc_client.go:175	check tls config %!(EXTRA *constant.TLSConfig=&{false false false    })
+2024-12-13T17:28:41.467+0800	INFO	rpc/grpc_client.go:180	try to get tls config from env
+2024-12-13T17:28:41.467+0800	INFO	rpc/grpc_client.go:189	 tls config from env is not enable
+2024-12-13T17:28:43.482+0800	INFO	rpc/rpc_client.go:439	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 success to connect a server {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}, connectionId=1734082122603_109.110.162.201_12277
+2024-12-13T17:28:43.482+0800	INFO	rpc/rpc_client.go:443	config-0-d5c6d0ce-760f-4f59-93e1-8cc5cb314978 abandon prev connection, server is {serverIp:1.94.115.233 serverPort:8848 serverGrpcPort:9848}, connectionId is 1734081999616_109.110.162.201_15435
+2024-12-13T17:28:43.482+0800	ERROR	rpc/grpc_client.go:280	connectionId 1734081999616_109.110.162.201_15435 received error event, isRunning:true, isAbandon=true, error=rpc error: code = Canceled desc = grpc: the client connection is closing
+2024-12-13T17:28:48.868+0800	DEBUG	rpc/grpc_connection.go:69	1734082122603_109.110.162.201_12277 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
+2024-12-13T17:28:54.235+0800	DEBUG	rpc/grpc_connection.go:69	1734082122603_109.110.162.201_12277 grpc request nacos server success, request=metadata:<type:"HealthCheckRequest" clientIp:"172.20.10.4" > body:<value:"{\"requestId\":\"\",\"module\":\"internal\"}" > , response={"resultCode":200,"errorCode":0,"success":true}
