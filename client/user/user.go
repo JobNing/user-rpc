@@ -2,10 +2,10 @@ package user
 
 import (
 	"context"
+	"github.com/JobNing/user-rpc/pb/user"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"time"
-	"user-rpc/pb/user"
 )
 
 func client(ctx context.Context, hand func(c user.UserClient) error) error {
