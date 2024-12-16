@@ -1,9 +1,9 @@
-module user-rpc
+module github.com/JobNing/user-rpc
 
 go 1.22.1
 
 require (
-	github.com/JobNing/corehub v0.0.0-20241213085957-68b0be4bc958
+	github.com/JobNing/corehub v1.0.1-0.20241216073346-11433aad0027
 	github.com/spf13/viper v1.19.0
 	google.golang.org/grpc v1.68.1
 	google.golang.org/protobuf v1.34.2
@@ -65,5 +65,3 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/driver/mysql v1.5.7 // indirect
 )
-
-replace github.com/JobNing/corehub v0.0.0-20241213085957-68b0be4bc958 => ../corehub
