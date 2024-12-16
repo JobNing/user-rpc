@@ -1,8 +1,8 @@
 package server
 
 import (
-	"user-rpc/model"
-	"user-rpc/pb/role"
+	"github.com/JobNing/user-rpc/model"
+	"github.com/JobNing/user-rpc/pb/role"
 )
 
 func rolePbToModel(in *role.RoleInfo) *model.Role {

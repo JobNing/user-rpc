@@ -2,10 +2,10 @@ package role
 
 import (
 	"context"
+	"github.com/JobNing/user-rpc/pb/role"
+	"github.com/JobNing/user-rpc/server"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"user-rpc/pb/role"
-	"user-rpc/server"
 )
 
 type RoleService struct {

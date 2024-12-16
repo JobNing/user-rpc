@@ -2,8 +2,8 @@ package migrate
 
 import (
 	"github.com/JobNing/corehub/mysql"
+	"github.com/JobNing/user-rpc/model"
 	"gorm.io/gorm"
-	"user-rpc/model"
 )
 
 func AutoMigrate() error {

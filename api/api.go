@@ -1,11 +1,11 @@
 package api
 
 import (
+	role1 "github.com/JobNing/user-rpc/api/role"
+	user1 "github.com/JobNing/user-rpc/api/user"
+	"github.com/JobNing/user-rpc/pb/role"
+	"github.com/JobNing/user-rpc/pb/user"
 	"google.golang.org/grpc"
-	role1 "user-rpc/api/role"
-	user1 "user-rpc/api/user"
-	"user-rpc/pb/role"
-	"user-rpc/pb/user"
 )
 
 func Register(s *grpc.Server) {

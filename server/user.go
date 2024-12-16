@@ -1,8 +1,8 @@
 package server
 
 import (
-	"user-rpc/model"
-	"user-rpc/pb/user"
+	"github.com/JobNing/user-rpc/model"
+	"github.com/JobNing/user-rpc/pb/user"
 )
 
 func userPbToModel(in *user.UserInfo) *model.User {

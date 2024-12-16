@@ -2,10 +2,10 @@ package user
 
 import (
 	"context"
+	"github.com/JobNing/user-rpc/pb/user"
+	"github.com/JobNing/user-rpc/server"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"user-rpc/pb/user"
-	"user-rpc/server"
 )
 
 type UserService struct {

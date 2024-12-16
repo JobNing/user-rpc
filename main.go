@@ -4,10 +4,10 @@ import (
 	"flag"
 	"github.com/JobNing/corehub/config"
 	"github.com/JobNing/corehub/grpc"
+	"github.com/JobNing/user-rpc/api"
+	_ "github.com/JobNing/user-rpc/config"
+	"github.com/JobNing/user-rpc/migrate"
 	grpc2 "google.golang.org/grpc"
-	"user-rpc/api"
-	_ "user-rpc/config"
-	"user-rpc/migrate"
 )
 
 var configFile = flag.String("f", "config/config.yaml", "the config file")
