@@ -6,5 +6,9 @@ namespace: 2206A
 group: rpc
 timeout-ms: 5000
 log-dir: ./tmp/nacos/log
-cache-dir: ./tmp/cache/log
+cache-dir: ./tmp/cache/cache
 log-level: debug
+
+port: 8081
+service-name: user-rpc
+ip: 127.0.0.1
