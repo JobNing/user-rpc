@@ -2,6 +2,9 @@ package user
 
 import (
 	"context"
+	"fmt"
+	"github.com/JobNing/corehub/config"
+	"github.com/JobNing/user-rpc/consts"
 	"github.com/JobNing/user-rpc/pb/user"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -9,8 +12,15 @@ import (
 )
 
 func client(ctx context.Context, hand func(c user.UserClient) error) error {
+	addr, err := config.GetServiceInstance(consts.SERVICE_NAME)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println("通过nacos获取地址：", addr)
+
 	//建立一个GRPC的链接
-	conn, err := grpc.NewClient("127.0.0.1:8081", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	conn, err := grpc.NewClient(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		return err
 	}
