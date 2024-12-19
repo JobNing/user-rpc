@@ -1,20 +1,20 @@
 package server
 
 import (
-	"github.com/JobNing/user-rpc/model"
+	model2 "github.com/JobNing/user-rpc/internal/model"
 	"github.com/JobNing/user-rpc/pb/role"
 )
 
-func rolePbToModel(in *role.RoleInfo) *model.Role {
-	return &model.Role{
-		Model: model.Model{
+func rolePbToModel(in *role.RoleInfo) *model2.Role {
+	return &model2.Role{
+		Model: model2.Model{
 			ID: in.ID,
 		},
 		Name: in.Name,
 	}
 }
 
-func roleModelToPb(in *model.Role) *role.RoleInfo {
+func roleModelToPb(in *model2.Role) *role.RoleInfo {
 	return &role.RoleInfo{
 		ID:   in.ID,
 		Name: in.Name,
@@ -61,7 +61,7 @@ func UpdateRole(in *role.RoleInfo) (*role.RoleInfo, error) {
 }
 
 func GetRole(id int64) (*role.RoleInfo, error) {
-	info := new(model.Role)
+	info := new(model2.Role)
 	res, err := info.Get(id)
 	if err != nil {
 		return nil, err
@@ -71,7 +71,7 @@ func GetRole(id int64) (*role.RoleInfo, error) {
 }
 
 func SearchRoleByName(phone string) ([]*role.RoleInfo, error) {
-	info := new(model.Role)
+	info := new(model2.Role)
 	res, err := info.SearchByName(phone)
 	if err != nil {
 		return nil, err

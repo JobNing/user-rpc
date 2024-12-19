@@ -2,8 +2,8 @@ package user
 
 import (
 	"context"
+	"github.com/JobNing/user-rpc/internal/server"
 	"github.com/JobNing/user-rpc/pb/user"
-	"github.com/JobNing/user-rpc/server"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

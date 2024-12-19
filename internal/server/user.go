@@ -1,13 +1,13 @@
 package server
 
 import (
-	"github.com/JobNing/user-rpc/model"
+	model2 "github.com/JobNing/user-rpc/internal/model"
 	"github.com/JobNing/user-rpc/pb/user"
 )
 
-func userPbToModel(in *user.UserInfo) *model.User {
-	return &model.User{
-		Model: model.Model{
+func userPbToModel(in *user.UserInfo) *model2.User {
+	return &model2.User{
+		Model: model2.Model{
 			ID: in.ID,
 		},
 		Username: in.Username,
@@ -17,7 +17,7 @@ func userPbToModel(in *user.UserInfo) *model.User {
 	}
 }
 
-func userModelToPb(in *model.User) *user.UserInfo {
+func userModelToPb(in *model2.User) *user.UserInfo {
 	return &user.UserInfo{
 		ID:       in.ID,
 		Username: in.Username,
@@ -67,7 +67,7 @@ func UpdateUser(in *user.UserInfo) (*user.UserInfo, error) {
 }
 
 func GetUser(id int64) (*user.UserInfo, error) {
-	info := new(model.User)
+	info := new(model2.User)
 	res, err := info.Get(id)
 	if err != nil {
 		return nil, err
@@ -77,7 +77,7 @@ func GetUser(id int64) (*user.UserInfo, error) {
 }
 
 func GetUserByPhone(phone string) (*user.UserInfo, error) {
-	info := new(model.User)
+	info := new(model2.User)
 	res, err := info.GetByPhone(phone)
 	if err != nil {
 		return nil, err

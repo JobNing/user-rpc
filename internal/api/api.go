@@ -1,8 +1,8 @@
 package api
 
 import (
-	role1 "github.com/JobNing/user-rpc/api/role"
-	user1 "github.com/JobNing/user-rpc/api/user"
+	role1 "github.com/JobNing/user-rpc/internal/api/role"
+	user1 "github.com/JobNing/user-rpc/internal/api/user"
 	"github.com/JobNing/user-rpc/pb/role"
 	"github.com/JobNing/user-rpc/pb/user"
 	"google.golang.org/grpc"
