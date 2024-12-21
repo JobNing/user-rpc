@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package type;
+
+option go_package = "pb/type";
+
+
+service Type {
+    rpc CreateType         (CreateTypeRequest)         returns (CreateTypeResponse)         {}
+    rpc UpdateType         (UpdateTypeRequest)         returns (UpdateTypeResponse)         {}
+    rpc GetType            (GetTypeRequest)            returns (GetTypeResponse)            {}
+    rpc GetTypeByPhone     (GetTypeByPhoneRequest)     returns (GetTypeByPhoneResponse)     {}
+    rpc GetTypeListByLV1ID (GetTypeListByLV1IDRequest) returns (GetTypeListByLV1IDResponse) {}; //通过一级分类ID查询所有的二级和三级分类
+}
+
+enum SexType {
+    Default = 0;
+    Man     = 1;
+    Woman   = 2;
+}
+
+message CreateTypeRequest {
+    TypeInfo In = 10;
+}
+
+message CreateTypeResponse {
+    TypeInfo Info = 10;
+}
+
+message UpdateTypeRequest {
+    TypeInfo In = 10;
+}
+
+message UpdateTypeResponse {
+    TypeInfo Info = 10;
+}
+
+message GetTypeRequest {
+    int64 ID = 10;
+}
+
+message GetTypeResponse {
+    TypeInfo Info = 10;
+}
+
+message GetTypeByPhoneRequest {
+    string Phone = 10;
+}
+
+message GetTypeByPhoneResponse {
+    TypeInfo Info = 10;
+}
+
+message GetTypeListByLV1IDRequest {
+    int64 ID = 10;
+}
+
+message TypeInfo {
+    int64  ID    = 10;
+    string Name  = 20;
+    string Icon  = 30;
+    int64  LV    = 40;
+    int64  PID   = 50;
+    repeated TypeInfo Infos = 60;
+}
+
+message GetTypeListByLV1IDResponse {
+    TypeInfo Info = 10;
+}
