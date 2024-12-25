@@ -4,6 +4,7 @@ go 1.22.1
 
 require (
 	github.com/JobNing/corehub v1.0.1-0.20241219090056-4457c2812108
+	github.com/shopspring/decimal v1.4.0
 	github.com/spf13/viper v1.19.0
 	google.golang.org/grpc v1.68.1
 	google.golang.org/protobuf v1.35.2
