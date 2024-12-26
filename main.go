@@ -1,13 +1,17 @@
 package main
 
 import (
+	"context"
 	"flag"
+	"fmt"
 	"github.com/JobNing/corehub/config"
 	"github.com/JobNing/corehub/grpc"
+	"github.com/JobNing/user-rpc/client/user"
 	_ "github.com/JobNing/user-rpc/config"
 	"github.com/JobNing/user-rpc/internal/api"
 	"github.com/JobNing/user-rpc/migrate"
 	grpc2 "google.golang.org/grpc"
+	"time"
 )
 
 var configFile = flag.String("f", "config/config.yaml", "the config file")
@@ -23,6 +27,15 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	go func() {
+		time.Sleep(20 * time.Second)
+		info, err := user.GetUser(context.Background(), 1)
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println(info)
+	}()
 
 	err = grpc.RegisterGRPC(8081, func(s *grpc2.Server) {
 		api.Register(s)

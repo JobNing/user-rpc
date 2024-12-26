@@ -3,31 +3,46 @@ package user
 import (
 	"context"
 	"fmt"
-	"github.com/JobNing/corehub/config"
-	"github.com/JobNing/user-rpc/consts"
 	"github.com/JobNing/user-rpc/pb/user"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/insecure"
 	"time"
+
+	_ "github.com/zeromicro/zero-contrib/zrpc/registry/consul"
 )
 
 func client(ctx context.Context, hand func(c user.UserClient) error) error {
-	addr, err := config.GetServiceInstance(consts.SERVICE_NAME)
+	//addr, err := config.GetServiceInstance(consts.SERVICE_NAME)
+	//if err != nil {
+	//	return err
+	//}
+	//
+	//fmt.Println("通过nacos获取地址：", addr)
+
+	svcCfg := fmt.Sprintf(`{"loadBalancingPolicy":"%s"}`, "round_robin")
+	conn, err := grpc.Dial("consul://60.204.199.43:8500/user-rpc?wait=14s&tag=public", grpc.WithInsecure(), grpc.WithDefaultServiceConfig(svcCfg))
 	if err != nil {
-		return err
+		panic(err)
 	}
+	defer conn.Close()
+	time.Sleep(29 * time.Second)
 
-	fmt.Println("通过nacos获取地址：", addr)
+	//target := "consul://60.204.199.43:8500/user-rpc" // schema:[//authority/]host[:port]/service[?query] 参考文档：https://github.com/grpc/grpc/blob/master/doc/naming.md
+	//ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
+	//defer cancel()
+	//
+	//conn, err := grpc.NewClient(
+	//	target,
+	//	grpc.WithTransportCredentials(insecure.NewCredentials()))
 
-	//建立一个GRPC的链接
-	conn, err := grpc.NewClient(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
+	////建立一个GRPC的链接
+	//conn, err := grpc.NewClient(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		return err
 	}
 
 	//控制GRPC接口超时
-	_, cancel := context.WithTimeout(ctx, time.Second)
-	defer cancel()
+	//_, cancel = context.WithTimeout(ctx, time.Second)
+	//defer cancel()
 
 	//延迟关闭链接
 	defer conn.Close()
